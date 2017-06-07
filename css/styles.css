@@ -23,7 +23,7 @@ body {
 }
 
 wrapper {
-  top:75px;
+  top:105px;
   position:relative;
 }
 
@@ -364,7 +364,7 @@ footer {
   flex-direction: row;
   flex-wrap:wrap;
   justify-content: space-around;
-  padding:30px 0 30px 0;
+  padding:40px 0 40px 0;
   /*justify-content: center;*/
 }
 
@@ -390,7 +390,7 @@ footer {
 }
 
 #ourteam .hero {
-  height:500px;
+  height:600px;
   background-image: url('../TEMPimages/stockphotoBG.jpg');
   display:flex;
   justify-content: center;
@@ -438,7 +438,7 @@ footer {
 
 @media screen and (max-width: 1000px) {
   .square {
-    width:33%;
+    width:33.33%;
   }
 }
 
@@ -464,20 +464,87 @@ footer {
   height:100%;
   width:100%;
   position: absolute;
-  background-image: url('../TEMPimages/projectstockphoto.jpg');
+  overflow:hidden;
   cursor:pointer;
 }
 
+.squarecontent img {
+  position: relative;
+  left:-16%;
+}
+
 .squareoverlay {
-  background-color: rgba(240,240,240,0.8);
+  background-color: rgba(240,240,240,0.85);
   height:35%;
   width:100%;
   position: absolute;
   bottom:-35%;
   transition-duration: 0.3s;
+  padding:10px 20px 10px 20px;
+  color: #515a5f;
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap:wrap;
+}
+
+.squareoverlay span {
+  font-size:1.2em;
 }
 
 .squarecontent:hover > .squareoverlay {
   bottom:0px;
   transition-duration: 0.3s;
+}
+
+.empprofile {
+  width:100%;
+  position: relative;
+  padding:60px;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.empprofile a {
+  color:#515a5f;
+  text-decoration: none;
+}
+
+.empprofile a:hover {
+  color:#a5a9ac;
+  text-decoration: none;
+}
+
+.empbody {
+  flex-wrap:wrap;
+  justify-content: space-around;
+  display:flex;
+}
+
+.empheadshot {
+  position: relative;
+  width:300px;
+  height:300px;
+  overflow:hidden;
+}
+
+
+/*.empheadshot:after {
+  display:block;
+  padding-bottom:100% !important;
+}*/
+
+
+.empbio {
+  width: 500px;
+  position: relative;
+  margin:0 10px 10px 10px;
+}
+
+.empbio h2 {
+  margin:10px 0 10px 0;
 }
