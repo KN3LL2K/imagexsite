@@ -11,10 +11,20 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class='row header'>
+  <div class='videowrapper'>
+    <div class='video'>
+      <video id="bgVideo" preload="true" autoplay loop muted poster="./TEMPimages/stockphotoBG.jpg">
+          <source src="video/WebLoop.mp4" type="video/mp4" > 
+      </video>
+      <div class='videooverlay'>
+        <img src='./images/logo-overlay.svg' /> <div class='vertline'></div> <h1>The Go-To-Source</h1>
+      </div>
+    </div>
+  </div>
+  <header class='row header-scroll'>
     <nav class='col-xs-12 navbar'>
       <div class='navbar-top'>
-          <div class='links'>
+          <div class='links hidden'>
             <a href="">Client Login</a>
             <a href="">File Upload</a>
             <a href="">Payments</a>
@@ -22,13 +32,13 @@
       </div>
       <div class='navbar-bottom'>
           <div class='col-xs-2'>
-            <img src="images/logo-nav.svg">
+            <img class='' src="images/logo-nav.svg">
             </img>
           </div>
           <button id="navbar-toggle" type="button" >
             <i class="fa fa-bars" aria-hidden="true"></i>
           </button>
-          <div class='links'>
+          <div class='links hidden'>
             <a href="./index.html">Home</a>
             <a href="./ourteam.html">Our Team</a>
             <a href="./index.html#solutions">Solutions</a>
@@ -37,70 +47,78 @@
           </div>
       </div>
     </nav>
-  <div class='block'></div>
-  <div id='sidenav' class='navbar-sidebar'>
-    <div class='sidebar-stripe'></div>
-    <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="">Our Team</a></li>
-      <li><a href="">Solutions</a></li>
-      <li><a href="">Projects</a></li>
-      <li><a href="">Contact</a></li>
-    </ul>
-    <div class='sidebar-client'>
+    <div class='block'></div>
+    <div id='sidenav' class='navbar-sidebar'>
+      <div class='sidebar-stripe'></div>
       <ul>
-      <li><a href="">Client Login</a></li>
-      <li><a href="">File Upload</a></li>
-      <li><a href="">Payments</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">Our Team</a></li>
+        <li><a href="">Solutions</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="">Contact</a></li>
       </ul>
-    </div>
-    <div class='sidebar-icons'>
-      <ul class=''>
-        <li><a href=''><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-        <li><a href=''><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        <li><a href=''><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
-  </header>
-  <section>
-  </section>
-  <footer>
-    <div class='footer-links row'>
-      <div class='col-md-3 col-sm-6 col-xs-12'>
-        <h4>ADDRESS</h4>
-        5990 Stoneridge Drive, Suite 112<br>
-        Pleasanton, CA 94588<br>
-        Tel: 925.474.8100 <br>
-        Fax: 925.474.8101 <br>
-        Email: info@imagexprint.com
-      </div>
-      <div class='col-md-3 col-sm-6 col-xs-12'>
-        <h4>LINKS</h4>
+      <div class='sidebar-client'>
         <ul>
-          <li><a href='./index.html'>Home</a></li>
-          <li><a href=''>Our Team</a></li>
-          <li><a href=''>Solutions</a></li>
-          <li><a href=''>Projects</a></li>
-          <li><a href='./contact.html'>Contact</a></li>
+        <li><a href="">Client Login</a></li>
+        <li><a href="">File Upload</a></li>
+        <li><a href="">Payments</a></li>
         </ul>
       </div>
-      <div class='col-md-3 col-sm-6 col-xs-12'>
-        <h4>FOLLOW US</h4>
-        <ul class='social-icons'>
+      <div class='sidebar-icons'>
+        <ul class=''>
           <li><a href=''><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
           <li><a href=''><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
           <li><a href=''><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
         </ul>
       </div>
-      <div class='col-md-3 col-sm-6 col-xs-12'>
-        <h4>FEED</h4>
-
+    </div>
+  </header>
+    <section id='home'>
+      <div class='mobilelanding'>
+        <div class='overlay'>
+          <img src='./images/logo-overlay.svg' />
+        </div>
       </div>
+    <div class='hero'>
 
     </div>
-    <div class='footer-copyright'>Copyright &copy; ImageX 2017</div>
-  </footer>
+  
+      <div id='solutions'></div>
+    </section>
+    <footer>
+      <div class='footer-links row'>
+        <div class='col-md-3 col-sm-6 col-xs-12'>
+          <h4>ADDRESS</h4>
+          5990 Stoneridge Drive, Suite 112<br>
+          Pleasanton, CA 94588<br>
+          Tel: 925.474.8100 <br>
+          Fax: 925.474.8101 <br>
+          Email: info@imagexprint.com
+        </div>
+        <div class='col-md-3 col-sm-6 col-xs-12'>
+          <h4>LINKS</h4>
+          <ul>
+            <li><a href='./index.html'>Home</a></li>
+            <li><a href=''>Our Team</a></li>
+            <li><a href=''>Solutions</a></li>
+            <li><a href=''>Projects</a></li>
+            <li><a href='./contact.html'>Contact</a></li>
+          </ul>
+        </div>
+        <div class='col-md-3 col-sm-6 col-xs-12'>
+          <h4>FOLLOW US</h4>
+          <ul class='social-icons'>
+            <li><a href=''><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+            <li><a href=''><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href=''><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div class='col-md-3 col-sm-6 col-xs-12'>
+          <h4>FEED</h4>
+        </div>
+      </div>
+      <div class='footer-copyright'>Copyright &copy; ImageX 2017</div>
+    </footer>
 
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -108,6 +126,7 @@
   crossorigin="anonymous">
   </script>
   <script src="https://use.fontawesome.com/74d295d164.js"></script>
+  <script src="js/home.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

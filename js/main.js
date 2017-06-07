@@ -17,5 +17,13 @@
       block.css('display', 'none');
       body.css('overflow-y','auto');
     })
+
+    $(window).resize(function() {
+      if ( $(this).width() > 768 ) {
+        sidenav.css('right', '-200px');
+        block.css('display', 'none');
+        body.css('overflow-y','auto');
+      }
+    })
   })
 })()

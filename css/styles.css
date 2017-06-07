@@ -50,7 +50,117 @@ section {
   width:100%;
   margin:0;
   z-index:10;
+  top:0;
 }
+
+.header-scroll {
+  position:relative;
+}
+
+.videowrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.video {
+  height:calc(100vh - 30px);
+  width:100%;
+  overflow:hidden;
+  /*position: absolute;*/
+}
+
+#bgVideo {
+  position: absolute;
+  /*top: 0;*/
+  /*left: 0;*/
+  width: 100%;
+  height: 100%;
+  z-index:-100;
+  overflow:hidden;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #bgVideo {
+    height: 400%; top: -150%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #bgVideo {
+    width: 400%; left: -150%;
+  }
+}
+
+/*#home {
+  position: relative;
+  width:100%;
+}*/
+
+.mobilelanding {
+  display:none;
+}
+
+@media screen and (max-width: 768px) {
+  .video {
+    display:none;
+  }
+
+  #home {
+    top:85px;
+  }
+
+  .mobilelanding {
+    display:block;
+    width:100%;
+    height:400px;
+    background-image: url('../TEMPimages/stockphotoBG.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .mobilelanding > .overlay {
+    height:100%;
+    width:100%;
+    background-color:rgba(240, 240, 240, 0.85);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  color: #fdb813;
+  font-size:1.9em;
+  }
+}
+
+.videooverlay {
+  top:0;
+  left:0;
+  height: calc(100vh - 30px);
+  background-color:rgba(240, 240, 240, 0.85);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  color: #fdb813;
+  font-size:1.9em;
+}
+
+.videooverlay img {
+  padding:5px 0 0 0;
+}
+
+.vertline {
+  margin:0 20px 0 20px;
+  border-left:2px solid #a5a9ac;
+  height:100px;
+}
+
+.hidden {
+  display:none !important;
+}
+
 
 .navbar {
   font-size:1em;
@@ -59,7 +169,6 @@ section {
   z-index:0;
   margin:0;
   padding:0;
-  /*position: fixed;*/
 }
 
 .navbar-top {
@@ -91,8 +200,6 @@ section {
   display:flex;
   align-items: center;
   justify-content: space-between;
-
-  /*padding:30px 10px 30px 10px;*/ 
 }
 
 .navbar-bottom a {
@@ -179,18 +286,6 @@ section {
 .sidebar-client a:hover {
   color:#fafafa !important;
 }
-
-/*.sidebar-icons {
-  margin:0;
-  padding:20px;
-  width:100%;
-}
-
-.sidebar-icons li {
-  display:inline;
-  padding:0;
-  margin:0;
-}*/
 
 #sidenav ul {
   list-style: none;
@@ -327,6 +422,12 @@ footer {
   background-size: cover;
 }
 
+#home > .hero {
+
+  height: calc(100vh - 100px);
+  background:red;
+}
+
 #contact > .hero {
   height:400px;
   background-image:url('../TEMPimages/office-photo2.jpg');
@@ -402,7 +503,9 @@ footer {
 }
 
 .teamintro {
+  color:#fafafa;
   background-color: #fdb813;
+  background-color:#005696;
   font-size:18px;
   text-align: center;
   line-height:28px;
@@ -505,7 +608,7 @@ footer {
 .empprofile {
   width:100%;
   position: relative;
-  padding:30px 0 30px 0;
+  padding:0 0 30px 0;
   display:flex;
   flex-wrap:wrap;
   flex-direction: column;
@@ -524,7 +627,7 @@ footer {
 }
 
 .empbody {
-  justify-content: space-around;
+  justify-content: center;
   display:flex;
   flex-direction:row;
 }
@@ -535,6 +638,11 @@ footer {
   width:300px;
   height:300px;
   overflow:hidden;
+}
+
+.empheadshot img {
+  left:-8%;
+  position: relative;
 }
 
 
@@ -550,6 +658,19 @@ footer {
   margin:0 0 10px 0;
 }
 
+.empbio a {
+  color: #6195bb;
+}
+
+.empbio a:hover {
+  color: #005696;
+}
+
+.empbio p {
+  font-size:16px;
+  line-height:24px;
+}
+
 @media screen and (max-width: 1024px) {
   .empbody {
     flex-wrap:wrap;
@@ -559,4 +680,98 @@ footer {
     padding:20px 20px 20px 20px;
     margin:10px 10px 10px 10px;
   }
+}
+
+.rectanglegrid {
+  padding:0 60px 60px 60px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  height:auto;
+}
+
+.rectangle {
+  width:50%;
+  position: relative;
+}
+
+.rectangle:after {
+  content:'';
+  display:block;
+  padding-bottom: 45%;
+}
+
+@media screen and (max-width: 900px) {
+  .rectangle {
+    width:100%;
+  }
+  .rectangle:after {
+    padding-bottom:35%;
+    /*padding-left:1000px;*/
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .rectangle {
+    width:100%;
+  }
+  .rectangle:after {
+    padding-bottom:45%;
+    /*padding-left:1000px;*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .rectangle:after {
+    padding-bottom:50%;
+    margin:20px;
+    /*padding-left:1000px;*/
+  }
+}
+
+
+.rectanglecontent {
+  height:100%;
+  width:100%;
+  position: absolute;
+  padding:10px 20px 10px 10px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.products {
+  background-color:#fafafa;
+}
+
+.productimg img {
+  width:180px;
+}
+
+.productinfo {
+  margin:10px 20px 10px 20px;
+  display:flex;
+  flex-direction: column;
+}
+
+.productinfo h3 {
+  margin:0 0 10px 0;
+}
+
+.productinfo button {
+  margin:10px 0 0 0;
+  padding:10px 0 10px 0;
+  width:150px;
+  font-size:16px;
+  border-style:none;
+  background-color:#6195BB;
+  color:#fafafa;
+  transition-duration: 0.3s;
+}
+
+.productinfo button:hover {
+  background-color:#005696;
+  transition-duration: 0.3s;
+  cursor:pointer;
 }
