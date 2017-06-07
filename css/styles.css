@@ -218,6 +218,10 @@ section {
   .links {
     display:none;
   }
+  
+  wrapper {
+    top: 85px;
+  }
 
   .navbar-top {
     height:10px;
@@ -501,7 +505,7 @@ footer {
 .empprofile {
   width:100%;
   position: relative;
-  padding:60px;
+  padding:30px 0 30px 0;
   display:flex;
   flex-wrap:wrap;
   flex-direction: column;
@@ -520,10 +524,11 @@ footer {
 }
 
 .empbody {
-  flex-wrap:wrap;
   justify-content: space-around;
   display:flex;
+  flex-direction:row;
 }
+
 
 .empheadshot {
   position: relative;
@@ -533,18 +538,25 @@ footer {
 }
 
 
-/*.empheadshot:after {
-  display:block;
-  padding-bottom:100% !important;
-}*/
-
-
 .empbio {
-  width: 500px;
+  max-width: 545px;
+  height:auto;
   position: relative;
+  padding:0 20px 20px 20px;
   margin:0 10px 10px 10px;
 }
 
 .empbio h2 {
-  margin:10px 0 10px 0;
+  margin:0 0 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .empbody {
+    flex-wrap:wrap;
+    text-align:center;
+  }
+  .empbio {
+    padding:20px 20px 20px 20px;
+    margin:10px 10px 10px 10px;
+  }
 }
