@@ -94,11 +94,6 @@ section {
   }
 }
 
-/*#home {
-  position: relative;
-  width:100%;
-}*/
-
 .mobilelanding {
   display:none;
 }
@@ -140,7 +135,7 @@ section {
   top:0;
   left:0;
   height: calc(100vh);
-  background-color:rgba(240, 240, 240, 0.55);
+  background-color:rgba(240, 240, 240, 0.15);
   display:flex;
   justify-content: center;
   align-items: center;
@@ -440,18 +435,22 @@ footer {
   font-size:24px;
   text-align:center;
   line-height: 40px;
-  padding:60px;
+  padding:60px 0 60px 0;
 }
 
 .welcome span {
   font-family: 'Playfair Display', serif;
   font-weight:700;
   color:#fdb813;
+}
 
+#prod-carousel .item {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  height: auto;
 }
 
 #info-1 {
-  /*padding: 60px;*/
   height:580px;
   font-size:16px;
   line-height:24px;
@@ -541,11 +540,6 @@ footer {
   font-family: 'Playfair Display', serif;
   font-weight:700;
   color:#fdb813;
-}
-
-#home > .hero {
-  height: 560px;
-  
 }
 
 #contact > .hero {
@@ -647,7 +641,7 @@ footer {
 }
 
 .solutions-desc .desc {
-  padding: 40px 40px 40px 80px;
+  padding: 60px 40px 100px 80px;
   margin-top:20px;
   margin-bottom:20px;
 }
@@ -753,6 +747,49 @@ footer {
   background-color: #fafafa;
 }
 
+
+#clients {
+  width: 100%;
+  
+}
+
+.clients-intro {
+  height: auto;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  background: #fdb813;
+}
+
+.clients-intro .content {
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+.clients-intro h2 {
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 8px;
+  color: #fafafa;
+}
+
+
+#clients .item {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  padding-top: 100px;
+  color: #515a5f;
+}
+
+#test-carousel .item div {
+  padding-top: 20px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #a5a9ac;
+}
+
 .contact-info {
   font-size:18px;
   line-height:24px;
@@ -816,7 +853,7 @@ footer {
 
 #ourteam .hero {
   height:600px;
-  background-image: url('../TEMPimages/stockphotoBG.jpg');
+  background-image: url('../images/team.png');
   display:flex;
   justify-content: center;
   align-items: center;

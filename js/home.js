@@ -5,6 +5,32 @@
     var $solNav = $('#solutions-nav');
     var $window = $(window);
     var $solMenuItem = $('.solutions-menu-item');
+
+    $("#prod-carousel").owlCarousel({
+      center: true,
+      nav: false,
+      margin: 500,
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplaySpeed: 450,
+      mouseDrag: false,
+      touchDrag: false,
+      dots: false,
+      autoWidth: true
+    });
+
+    $("#test-carousel").owlCarousel({
+      center: true,
+      nav: false,
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplaySpeed: 450,
+      dots: false
+    });
     /*
     * solutions section begin
     */
