@@ -9,7 +9,7 @@
     $("#prod-carousel").owlCarousel({
       center: true,
       nav: false,
-      margin: 500,
+      margin: 2000,
       items: 1,
       loop: true,
       autoplay: true,
@@ -27,7 +27,7 @@
       items: 1,
       loop: true,
       autoplay: true,
-      autoplayTimeout: 1000,
+      autoplayTimeout: 6000,
       autoplaySpeed: 450,
       dots: false
     });

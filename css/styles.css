@@ -103,15 +103,12 @@ section {
     display:none;
   }
 
-  #home {
-    top:85px;
-  }
-
   .mobilelanding {
+    margin-top: 85px;
     display:block;
     width:100%;
     height:400px;
-    background-image: url('../TEMPimages/stockphotoBG.jpg');
+    background-image: url('../images/loupe-1400-933.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,13 +118,13 @@ section {
   .mobilelanding > .overlay {
     height:100%;
     width:100%;
-    background-color:rgba(240, 240, 240, 0.85);
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Playfair Display', serif;
-  color: #fdb813;
-  font-size:1.9em;
+    background-color:rgba(240, 240, 240, 0.25);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    color: #fdb813;
+    font-size:1.9em;
   }
 }
 
@@ -451,17 +448,26 @@ footer {
 }
 
 #info-1 {
-  height:580px;
+  /* padding: 80px 0 80px; */
+  min-height:560px;
+  height:auto;
   font-size:16px;
   line-height:24px;
 }
 
 #info-1 .img-bg {
   padding:0;
-  background-image: url('../TEMPimages/office-photo2.jpg');
+  background-image: url('../images/biz-card.jpg');
   background-size:cover;
   background-position: center center;
 }
+
+@media screen and (max-width: 1024px) {
+  #info-1 .img-bg {
+    height: 500px;
+  }
+}
+
 
 #info-1 h3 {
   font-size:36px;
@@ -472,9 +478,9 @@ footer {
 }
 
 #info-1 .info-body {
-  
-  position: relative;
-  width:330px;
+  margin: 80px 0 80px 0;
+  /* position: relative; */
+  /* width:330px; */
 }
 
 #info-1 .info-body p {
@@ -482,12 +488,13 @@ footer {
 }
 
 
+
+
 #info-2 {
   display:flex; 
   justify-content:center; 
   align-items:center; 
-  padding:60px;
-  height:580px;
+  padding:100px 0 100px 0;
   font-size:18px;
   line-height:32px;
   background:#005696; 
@@ -504,7 +511,7 @@ footer {
 #info-2 p {
   font-size: 16px;
   line-height: 24px;
-  width: 350px;
+  /* width: 350px; */
 }
 
 /*
@@ -543,8 +550,20 @@ footer {
 }
 
 #contact > .hero {
-  height:400px;
-  background-image:url('../TEMPimages/office-photo2.jpg');
+  height:550px;
+  background-image:url('../images/imagex-sign-1400-788.jpg');
+}
+
+@media screen and (max-width: 1000px) {
+  #contact > .hero {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #contact > .hero {
+    height: 600px;
+  }
 }
 
 #solutions {
@@ -641,7 +660,7 @@ footer {
 }
 
 .solutions-desc .desc {
-  padding: 60px 40px 100px 80px;
+  padding: 60px 60px 100px 60px;
   margin-top:20px;
   margin-bottom:20px;
 }
@@ -773,12 +792,15 @@ footer {
   color: #fafafa;
 }
 
+#test-carousel {
+  padding: 100px 0 100px 0;
+}
 
 #clients .item {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  padding-top: 100px;
+  padding-top: 20px;
   color: #515a5f;
 }
 
@@ -847,16 +869,29 @@ footer {
   color:#005696;
 }
 
-#ourteam {
-
-}
-
 #ourteam .hero {
   height:600px;
   background-image: url('../images/team.png');
   display:flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 1400px) {
+  #ourteam .hero {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #ourteam .hero {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #ourteam .hero {
+    height: 350px;
+  }
 }
 
 .teamintro {
@@ -883,7 +918,6 @@ footer {
 }
 
 #empsquares {
-  /*height:1000px;*/
   padding:0;
 }
 
@@ -1013,6 +1047,8 @@ footer {
 
 .empbio h2 {
   margin:0 0 10px 0;
+  font-size: 24px;
+  line-height: 38px;
 }
 
 .empbio a {
@@ -1024,7 +1060,7 @@ footer {
 }
 
 .empbio p {
-  font-size:16px;
+  font-size:14px;
   line-height:24px;
 }
 
@@ -1064,7 +1100,6 @@ footer {
   }
   .rectangle:after {
     padding-bottom:35%;
-    /*padding-left:1000px;*/
   }
 }
 
@@ -1074,7 +1109,6 @@ footer {
   }
   .rectangle:after {
     padding-bottom:45%;
-    /*padding-left:1000px;*/
   }
 }
 
@@ -1082,7 +1116,6 @@ footer {
   .rectangle:after {
     padding-bottom:50%;
     margin:20px;
-    /*padding-left:1000px;*/
   }
 }
 
