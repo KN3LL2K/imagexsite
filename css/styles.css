@@ -354,6 +354,7 @@ footer {
   position: relative;
   display: block;
   z-index:0;
+  padding: 60px 0 0 0;
 }
 
 .footer-links {
@@ -361,7 +362,7 @@ footer {
   justify-content:space-around;
   align-items: flex-start;
   flex-wrap:wrap;
-  padding:30px;
+  padding:0 100px 30px 100px;
   margin:0;
 }
 
@@ -433,6 +434,7 @@ footer {
   text-align:center;
   line-height: 40px;
   padding:60px 0 60px 0;
+  background: #fafafa;
 }
 
 .welcome span {
@@ -479,26 +481,34 @@ footer {
 
 #info-1 .info-body {
   margin: 80px 0 80px 0;
-  /* position: relative; */
-  /* width:330px; */
 }
 
 #info-1 .info-body p {
   margin:0;
 }
 
-
-
-
 #info-2 {
-  display:flex; 
-  justify-content:center; 
-  align-items:center; 
-  padding:100px 0 100px 0;
-  font-size:18px;
-  line-height:32px;
+  padding:100px 60px 100px 60px;
+  font-size:16px;
+  line-height:24px;
   background:#005696; 
   color:#fafafa;
+}
+
+#info-2 .detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#info-2 .detail i {
+  font-size: 72px;
+  margin-bottom: 20px;
+}
+
+#info-2 .detail p {
+  max-width: 300px;
 }
 
 #info-2 h3 {
@@ -511,7 +521,6 @@ footer {
 #info-2 p {
   font-size: 16px;
   line-height: 24px;
-  /* width: 350px; */
 }
 
 /*
@@ -550,12 +559,13 @@ footer {
 }
 
 #contact > .hero {
-  height:550px;
-  background-image:url('../images/imagex-sign-1400-788.jpg');
+  height:350px;
+  background-image:url('../images/contact-hero-2.jpg');
+  background-position: 0% 45%;
 }
 
-@media screen and (max-width: 1000px) {
-  #contact > .hero {
+/* @media screen and (max-width: 1000px) { */
+  /* #contact > .hero {
     height: 400px;
   }
 }
@@ -564,7 +574,7 @@ footer {
   #contact > .hero {
     height: 600px;
   }
-}
+} */
 
 #solutions {
   background: #fafafa;
@@ -857,8 +867,8 @@ footer {
   width:250px;
   margin:20px 10px 20px 10px;
 }
+
 .empcontactsentry a {
-  /*color:#fdb813;*/
   color:#6195bb;
   font-weight: 700;
   text-decoration: none;
@@ -870,38 +880,134 @@ footer {
 }
 
 #ourteam .hero {
-  height:600px;
-  background-image: url('../images/team.png');
+  height:350px;
+  background-image: url('../images/team.jpg');
+  background-position: 0 25%;
   display:flex;
   justify-content: center;
   align-items: center;
 }
 
-@media screen and (min-width: 1400px) {
+#projects {
+  margin-top: 85px;
+  height: auto;
+  width:100%;
+  position:relative;
+}
+
+#projects .hero {
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/loupe-1400-933.jpg');
+}
+
+@media screen and (min-width: 1700px) {
   #ourteam .hero {
-    height: 700px;
+    height: 1300px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #ourteam .hero {
+    height: 1000px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #ourteam .hero {
+    height: 350px;
+  }
+  #projects .hero {
+    height: 600px;
   }
 }
 
 @media screen and (max-width: 1000px) {
   #ourteam .hero {
-    height: 400px;
+    height: 350px;
+  }
+  #projects .hero {
+    height: 550px;
   }
 }
 @media screen and (max-width: 768px) {
   #ourteam .hero {
     height: 350px;
   }
+  #projects .hero {
+    height: 450px;
+  }
 }
 
-.teamintro {
-  color:#fafafa;
-  background-color: #fdb813;
-  background-color:#005696;
-  font-size:18px;
+#projects-info {
+  padding: 60px 60px 60px 60px;
   text-align: center;
-  line-height:28px;
-  padding:60px 0 60px 0;
+  background: #fafafa;
+  width: 100%;
+
+}
+
+#projects-info h3 {
+  font-size: 36px;
+  line-height: 42px;
+  margin: 0;
+}
+
+#projects-info span {
+  font-size: 36px;
+  line-height: 42px;
+  font-family:'Playfair Display', serif;
+  font-weight: bold;
+  color: #fdb813;
+}
+
+#projects-info p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #888888;
+}
+
+#featured-info {
+  padding: 50px 60px 60px 60px;
+  text-align: center;
+  background: #fdb813;
+  width: 100%;
+
+}
+
+#featured-info h3 {
+  font-size: 36px;
+  line-height: 42px;
+  color: #fafafa;
+  margin: 0;
+}
+
+#featured-info p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #515a5f;
+}
+
+
+
+.teamintro {
+  background-color:#fafafa;
+  font-size:16px;
+  text-align: center;
+  line-height:24px;
+  padding:60px 60px 60px 60px;
+}
+
+.teamintro h1 {
+  font-size: 36px;
+  line-height: 42px;
+  margin: 0 0 40px 0;
+}
+
+.teamintro p {
+  color:#888888;
 }
 
 .herooverlay {
@@ -911,10 +1017,9 @@ footer {
   box-shadow: 0 2px 2px 1px rgba(100, 100, 100, 0.2);
 }
 
-.herooverlay span {
+.teamintro span {
   font-family:'Playfair Display', serif;
   color: #fdb813;
-  font-size:1.25em;
 }
 
 #empsquares {
