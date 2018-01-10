@@ -4,6 +4,7 @@
     var navbarToggle = $('#navbar-toggle');
     var block = $('.block');
     var body = $('body');
+    var prodCarousel = $('#prod-carousel');
 
     // show mobile sidenav
     navbarToggle.on('click', function() {
@@ -23,6 +24,9 @@
         sidenav.css('right', '-200px');
         block.css('display', 'none');
         body.css('overflow-y','auto');
+        if (prodCarousel) {
+          prodCarousel.css('display', 'none');
+        }
       }
     })
   })
